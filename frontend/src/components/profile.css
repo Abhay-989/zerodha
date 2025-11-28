@@ -1,0 +1,49 @@
+.profile-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  background: #0073ff;
+  color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+}
+
+.username {
+  font-size: 14px;  
+  color: #222;
+}
+
+.dropdown {
+  top: 45px;
+  right: 0;
+  background: white;
+  padding: 10px 12px;
+  border-radius: 6px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+.dropdown button {
+     background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+.dropdown button:hover {
+  color: #ff3333;
+  font-weight: bold;
+}

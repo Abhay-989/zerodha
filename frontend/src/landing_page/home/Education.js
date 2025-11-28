@@ -10,9 +10,9 @@ function Education() {
             <div className='col-6'>
                 <h1 className='mb-3 fs-2'>Free and open market education</h1>
                 <p>Varsity, the largest online stock market education book in the world covering everything from the basics to advanced trading.</p>
-                <a href='' className='mx-5' style={{textDecoration:"none"}}>Versity<i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                <a href='' className='mx-5' style={{textDecoration:"none"}}>Versity<i className="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                <p className='mt-5'>TrandingQ&A, the most active trading and investment community in India for all your market related queries.</p>
-               <a href='' style={{textDecoration:"none"}}>TrandingQ&A <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+               <a href='' style={{textDecoration:"none"}}>TrandingQ&A <i className="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
 
             </div>
         </div>

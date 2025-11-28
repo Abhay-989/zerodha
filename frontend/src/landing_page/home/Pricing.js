@@ -11,7 +11,7 @@ function Pricing() {
           </p>
           <a href="" className="mx-5" style={{ textDecoration: "none" }}>
             See Pricing{" "}
-            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            <i className="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </a>
         </div>
         <div className="col-2"></div>

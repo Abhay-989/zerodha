@@ -1,23 +1,29 @@
-require("dotenv").config();
+import dotenv from "dotenv";
+dotenv.config();
+import connectDB from "./config/db.js";
+import express from "express";
+import bodyParser from "body-parser";
+import cors from "cors";
+import authRoutes from "./routes/auth.js";
+import orderRoutes from "./routes/orderRoutes.js";
+import {HoldingsModel} from "./models/HoldingsModel.js";
+import OrdersModel from "./models/OrdersModel.js";
+import {PositionsModel} from "./models/PositionsModel.js";
+import cookieParser from "cookie-parser";
 
-const express = require("express");
-const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
-const cors = require("cors");
 
-const { HoldingsModel } = require("./model/HoldingsModel");
-
-const { PositionsModel } = require("./model/PositionsModel");
-const { OrdersModel } = require("./model/OrdersModel");
-
+connectDB();
 const PORT = process.env.PORT || 3002;
-const uri = process.env.MONGO_URL;
+
 
 const app = express();
-
+app.use(express.json());
 app.use(cors());
 app.use(bodyParser.json());
+app.use("/api/auth", authRoutes);
+app.use("/api/orders", orderRoutes);
 
+app.use(cookieParser());
 // app.get("/addHoldings", async (req, res) => {
 //   let tempHoldings = [
 //     {
@@ -248,7 +254,5 @@ app.post("/newOrder", async (req, res) => {
 
 
 app.listen(PORT, () => {
-  console.log("App started!");
-  mongoose.connect(uri);
-  console.log("DB started!");
+  console.log(`Server running on http://localhost:${PORT}`);
 });
