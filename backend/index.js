@@ -10,7 +10,6 @@ import {HoldingsModel} from "./models/HoldingsModel.js";
 import OrdersModel from "./models/OrdersModel.js";
 import {PositionsModel} from "./models/PositionsModel.js";
 import cookieParser from "cookie-parser";
-const path = require("path");
 
 
 connectDB();
