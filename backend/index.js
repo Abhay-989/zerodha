@@ -1,14 +1,14 @@
 import dotenv from "dotenv";
-dotenv.config({ path: "./.env" });
+dotenv.config();
 import connectDB from "./config/db.js";
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
-import authRoutes from "./backend/routes/auth.js";
-import orderRoutes from "./backend/routes/orderRoutes.js";
-import {HoldingsModel} from "./backend/models/HoldingsModel.js";
-import OrdersModel from "./backend/models/OrdersModel.js";
-import {PositionsModel} from "./backend/models/PositionsModel.js";
+import authRoutes from "./routes/auth.js";
+import orderRoutes from "./routes/orderRoutes.js";
+import {HoldingsModel} from "./models/HoldingsModel.js";
+import OrdersModel from "./models/OrdersModel.js";
+import {PositionsModel} from "./models/PositionsModel.js";
 import cookieParser from "cookie-parser";
 
 
